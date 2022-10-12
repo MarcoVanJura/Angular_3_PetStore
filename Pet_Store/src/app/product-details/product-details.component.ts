@@ -10,7 +10,6 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-
   product: IProducts = {} as IProducts;
   id: number = 0;
 
@@ -19,7 +18,7 @@ export class ProductDetailsComponent implements OnInit {
               ) { }
 
   addToCart() {
-    window.alert('Your product has been added to the cart!');
+    alert('Your product has been added to the cart!');
     this.cartService.addToCart(this.product);
    }
 
