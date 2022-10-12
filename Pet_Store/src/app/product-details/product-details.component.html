@@ -1,0 +1,13 @@
+<div class="d-flex flex-column align-items-center border border-dark border-2 p-2 mt-2" *ngIf="product" id="test">
+    <h2>{{product.name}}</h2>
+    <img style="width:18rem;" src="{{product.image}}" alt="{{product.name}}">
+    <h4>{{ product.price | currency:'EUR':true }}</h4>
+    <p>{{product.description }}</p>
+</div>
+
+<div class="container text-center">
+    <div class="row row-col-2">
+        <a routerLink="" class="btn btn-secondary col m-1">Back</a>
+        <button (click)="addToCart()" class="btn btn-success col m-1">Buy now</button>
+    </div>
+</div>

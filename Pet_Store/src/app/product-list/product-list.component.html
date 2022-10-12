@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col my-3 d-flex justify-content-center" *ngFor="let product of products ; index as productId">
+        <div class="card position-relative" style="width: 18rem;"> <img src="{{product.image}}" class="card-img-top" alt="{{product.name}}">
+            <div class="card-body p-3">
+                <h5 class="card-title">{{product.name}}</h5>
+                <ul>
+                    <!-- <li *ngIf="product.description">
+                        <p class="card-text pb-3">{{product.description}}</p>
+                    </li> -->
+                    <li>
+                        <p class="card-text pb-3 fs-4"> {{ product.price | currency:'EUR':true }}</p>
+                    </li>
+                </ul>
+                <div class="container text-center">
+                    <div class="row row-col-2">
+                        <a routerLink="products/{{productId}}" class="btn btn-secondary col m-1">Details</a>
+                        <button (click)="addToCart()" class="btn btn-success col m-1">Buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
