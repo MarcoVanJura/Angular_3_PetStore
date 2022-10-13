@@ -3,4 +3,5 @@ export interface IProducts {
     price: number;
     image: string;
     description?: string; // optional property
+    quantity: number;
     }
